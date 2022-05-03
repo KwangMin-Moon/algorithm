@@ -7,7 +7,20 @@
     <script>
       function solution(arr) {
         let answer = [];
-
+        let sum = 0;
+        let min = Number.MAX_SAFE_INTEGER;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 !== 0) {
+            sum = sum + arr[i];
+            answer.push(arr[i]);
+          }
+        }
+        for (let i = 0; i < answer.length; i++) {
+          if (answer[i] < min) {
+            min = answer[i];
+          }
+        }
+        answer = [sum, min];
         return answer;
       }
 
