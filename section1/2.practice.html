@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      //   function solution(A, B, C) {
+      //     let answer = A;
+      //     let yesOrNo;
+      //     if (B > A) {
+      //       answer = B;
+      //     } else if (C > B) {
+      //       answer = C;
+      //     }
+      //     if (answer - (A + B + C - answer) > 0) {
+      //       yesOrNo = 'Yes';
+      //     } else {
+      //       yesOrNo = 'No';
+      //     }
+      //     return yesOrNo;
+      //   }
+
+      //   console.log(solution(13, 33, 17));
+      function solution(A, B, C) {
+        let max = A; // 변수 이름을 보고 값을 추측할 수 있어야 한다.
+        let answer = 'Yes';
+        if (B > A) max = B;
+        if (C > max) max = C;
+        if (max - (A + B + C - max) >= 0) {
+          answer = 'No';
+        }
+        console.log(max);
+        return answer;
+      }
+
+      console.log(solution(13, 33, 17));
+    </script>
+  </body>
+</html>
