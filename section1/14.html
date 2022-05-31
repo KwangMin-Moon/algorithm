@@ -6,13 +6,14 @@
   <body>
     <script>
       function solution(s) {
-        let answer = '',
-          max = Number.MIN_SAFE_INTEGER;
+        let answer = s.sort((a, b) => b.length - a.length);
 
-        return answer;
+        return answer[0];
       }
       let str = ['teacher', 'time', 'student', 'beautiful', 'good'];
       console.log(solution(str));
     </script>
   </body>
 </html>
+
+<!-- max변수에 길이를 할당헤서 문제 풀어보기 -->

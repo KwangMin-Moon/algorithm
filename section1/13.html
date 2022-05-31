@@ -7,7 +7,13 @@
     <script>
       function solution(s) {
         let answer = '';
-
+        for (let word of s) {
+          if (word.charCodeAt() >= 65 && word.charCodeAt() <= 90) {
+            answer += word.toLowerCase();
+          } else {
+            answer += word.toUpperCase();
+          }
+        }
         return answer;
       }
 

@@ -6,11 +6,13 @@
   <body>
     <script>
       function solution(s) {
-        let answer;
-
+        let answer =
+          s.length % 2
+            ? s.substr(Math.ceil(s.length / 2) - 1, 1)
+            : s.substr(Math.ceil(s.length / 2) - 1, 2);
         return answer;
       }
-      console.log(solution('study'));
+      console.log(solution('goood'));
     </script>
   </body>
 </html>

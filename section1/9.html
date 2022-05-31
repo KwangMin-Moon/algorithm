@@ -1,3 +1,5 @@
+<!-- 문자열 반복과 정규표현식으로 풀어보기 -->
+
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +8,10 @@
   <body>
     <script>
       function solution(s) {
-        let answer = '';
+        let answer = s
+          .split('')
+          .map((word) => (word === 'A' ? (word = '#') : word))
+          .join('');
 
         return answer;
       }

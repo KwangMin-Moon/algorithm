@@ -7,8 +7,10 @@
     <script>
       function solution(s, t) {
         let answer = 0;
+        const word = s;
+        const regexp = word.match(new RegExp(`${t}`, 'g'));
 
-        return answer;
+        return (answer = regexp.length);
       }
 
       let str = 'COMPUTERPROGRAMMING';
@@ -16,3 +18,5 @@
     </script>
   </body>
 </html>
+
+<!--  split으로도 구할 수 있다. -->

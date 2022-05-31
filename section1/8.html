@@ -6,7 +6,20 @@
   <body>
     <script>
       function solution(arr) {
-        let answer = arr;
+        let answer = [];
+        let same = [];
+        let sum = arr.reduce((a, b) => a + b, 0);
+        console.log(sum);
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length; j++) {
+            if (i === j) {
+              same.push(arr[i]);
+            } else if (sum - arr[i] - arr[j] === 100) {
+              answer.push(arr[i]);
+              answer.push(arr[j]);
+            }
+          }
+        }
 
         return answer;
       }

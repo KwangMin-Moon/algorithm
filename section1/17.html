@@ -6,8 +6,13 @@
   <body>
     <script>
       function solution(s) {
-        let answer;
-
+        // let array = [];
+        // let answer = s.forEach((element) => {
+        //   if (!array.includes(element)) {
+        //     array.push(element);
+        //   }
+        // });
+        let answer = s.filter((v, i) => s.indexOf(v) === i);
         return answer;
       }
       let str = ['good', 'time', 'good', 'time', 'student'];
