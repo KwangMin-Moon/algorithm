@@ -10,7 +10,6 @@ function solution(arr1, arr2) {
     } else if (arr1[p1] < arr2[p2]) p1++;
     else p2++;
   }
-
   return answer;
 }
 

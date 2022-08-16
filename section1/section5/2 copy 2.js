@@ -1,5 +1,5 @@
 function solution(arr1, arr2) {
-  let answer = [];
+  const answer = [];
   arr1.sort((a, b) => a - b);
   arr2.sort((a, b) => a - b);
   let p1 = (p2 = 0);
